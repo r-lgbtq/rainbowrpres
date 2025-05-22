@@ -163,7 +163,7 @@ A warning
 ::: {.column .col-box-yellow width="32%"}
 Box 1
 
-Use class `.col-box-{color}` to apply colour box styling, e.g. `.col-box-aubergine-light`
+Use class `.col-box-{color}` to apply colour box styling, e.g. `.col-box-yellow`
 :::
 
 ::: {.column .col-box-orange width="32%"}
@@ -183,7 +183,7 @@ Box 3
 :::: {.column .col-box-yellow-tall width="49%"}
 Colour box styling can be applied to entire columns
 
-This column has class `.col-box-aubergine-light-tall`
+This column has class `.col-box-yellow-tall`
 ::::
 
 :::: {.column width="49%"}
@@ -192,7 +192,7 @@ Or to divs within columns to create stacks
 :::
 
 :::{.col-box-green-short}
-This div has class `.col-box-teal-light-short`
+This div has class `.col-box-green-short`
 :::
 
 ::::
@@ -205,16 +205,16 @@ This div has class `.col-box-teal-light-short`
 :::: {.column .col-box-red-tall width="49%"}
 Colour box styling can be applied to entire columns
 
-This column has class `.col-box-blue-dark-tall`
+This column has class `.col-box-red-tall`
 ::::
 
 :::: {.column width="49%"}
-:::{.col-box-pink-short}
+:::{.col-box-blue-short}
 Or to divs within columns to create stacks
 :::
 
-:::{.col-box-blue-short}
-This div has class `.col-box-ruby-dark-short`
+:::{.col-box-pink-short}
+This div has class `.col-box-pink-short`
 :::
 
 ::::
