@@ -1,69 +1,89 @@
 /*-- scss:defaults --*/
 
-$font-family-sans-serif: Lato, Helvetica, sans-serif !default;
+$font-family-sans-serif: Figtree, Helvetica, sans-serif !default;
 $font-family-monospace: "Fira Mono", monospace;
-$headings-font-family: Lato, Helvetica, sans-serif !default;
+$headings-font-family: Figtree, Helvetica, sans-serif !default;
 
-//  Warwick colors 
-$aubergine: #3C1053;
-$aubergine85: #59346d;
-$aubergine70: #775887; 
-$aubergine50: #9e88a9;
-$aubergine30: #c5b7cb;
-$aubergine15: #e2dbe5;
-
-$ruby_bright: #CB333B;
-$blue_bright: #00A9CE;
-$teal_bright: #6DCDB8;
-$orange_bright: #E87722;
-$gold_bright: #F1BE48;
-
-$ruby_dark: #9D2235;
-$blue_dark: #41748D;
-$teal_dark: #507F70;
-$orange_dark: #BE531C;
-$gold_dark: #D69A2D;
-
-$teal_light: #C4EBE4;  //teal 40%
-$ruby_light: #EFC2C4;  // ruby 30%
-$aubergine_light: $aubergine30;
-
-$blue_mid: #0090AF; // 15% shade of $blue_bright
+//  rainbowR colors
+$red: #FF4239;
+$orange: #FF6B00;
+$yellow: #FFC843;
+$green: #09CE7C;
+$blue: #02B3E3;
+$pink: #DA3AB3;
+$purple: #DA3AB3;
+$royal-blue: #01299F;
+$dark-blue: #001552;
+$very-dark-blue: #000D33;
 
 $gray: #58595B;
-$gray_dark: #383838; // this is text colour used on main Warwick site
+$gray_dark: #383838; // 
 $black: #000000;
 $gray20: #cccccc; // % of black
 $gray10: #e6e6e6; // % of black
 $gray05: #f2f2f2; // % of black
 $white: #ffffff;
+$light: #FAFBFF;
+$lightish: #F5F7FF;
 
-$primary: $aubergine !default;
+$primary: $purple;
+$body-color: $very-dark-blue;
+$body-bg: $white;
+$link-color: $blue;
+$code-block-border-color: $gray10;
+$code-block-bg: $white;
 
 $presentation-font-size-root: 32px;
 $code-block-font-size: .7em;
-$presentation-heading-font: Lato, Helvetica, sans-serif !default;
-$body-color: $gray_dark;
-$link-color: $blue_mid;
-$code-color: $ruby_bright;
+$presentation-heading-font: Figtree, Helvetica, sans-serif !default;
 
-// MOST IMPORTANT: Define callout colors in scss:defaults section
-$callout-color-note: $blue_bright;
-$callout-color-caution: $gold_bright;
-$callout-color-tip: $teal_bright;
-$callout-color-warning: $orange_bright;
-$callout-color-important: $ruby_bright;
+$callout-color-note: $blue;
+$callout-color-tip: $green;
+$callout-color-caution: $orange;
+$callout-color-warning: $yellow;
+$callout-color-important: $red;
 
 /*-- scss:rules --*/
+// colour classes
+.red {
+  color: $red;
+  font-weight: 700;
+}
+
+.orange {
+  color: $orange;
+  font-weight: 700;
+}
+
+.yellow {
+  color: $yellow;
+  font-weight: 700;
+}
+
+.green {
+  color: $green;
+  font-weight: 700;
+}
+
+.blue {
+  color: $blue;
+  font-weight: 700;
+}
+
+.pink {
+  color: $pink;
+  font-weight: 700;
+}
 
 // Create a map using color names
 $colors: (
-  'teal-light': $teal_light,
-  'ruby-light': $ruby_light,
-  'aubergine-light': $aubergine_light,
-  'ruby-dark': $ruby_dark,
-  'blue-dark': $blue_dark,
-  'teal-dark': $teal_dark
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'blue': $blue,
+  'pink': $pink,
+  'purple': $purple
 );
 
 // mixin for boxes with height parameter
@@ -134,7 +154,7 @@ pre.sourceCode {
 #title-slide .title {
   font-size: 70px;
   padding-bottom: .25em;
-  color: $teal_bright;
+  color: $yellow;
 }
 
 #title-slide .subtitle {
@@ -219,27 +239,24 @@ kbd {
 .inverse {
   color: $white;
 
-  h1, h2, h3 {
-    color: $teal_bright;
-    
-    code {
-      color: $gold_bright;
-    }
+  h1, h2, h3, .slide-title {
+    color: $yellow !important;
   }
   
   .slide-background-content {
-    background-color: $aubergine;
+    background-color: $very-dark-blue;
   }
   
   a {
-    color: $blue_bright;
+    color: $blue;
   }
   
   p code {
-    color: $gold_bright;
+    color: $yellow;
   }
   
   // Inverse callout backgrounds
+  /*
   div.callout-note.callout-style-default .callout-title {
     background-color: $blue_dark !important;
   }
@@ -264,6 +281,7 @@ kbd {
   .callout-icon::before {
     filter: brightness(0) invert(1);
   }
+    */
 }
 
 // CRITICAL: This overrides callout title colors in inverse slides

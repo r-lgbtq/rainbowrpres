@@ -6,7 +6,7 @@ date: last-modified
 date-format: long
 footer: <https://warwick-stats-resources.github.io>
 format:
-  warwickpres-revealjs: default
+  rainbowrpres-revealjs: default
 # To remove logo from title slide, comment out the following line in
 # in `"_extensions/Warwick-Stats-Resources/warwickpres/_extension.yml"`: 
 #   `data-background-image: warwick-logo-white.png`
@@ -94,42 +94,6 @@ penguins %>%
   )
 ```
 
-## warwickplots
-
-For plotting, the warwickpres extension goes hand-in-hand with the **warwickplots** R package, which provides colour palettes and a ggplot2 theme, `theme_warwick()`, that are also consistent with the University of Warwick's branding.
-
-<https://warwick-stats-resources.github.io/warwickplots/>
-
-```{r}
-#| echo: false
-library(warwickplots)
-plot(warwick_palettes)
-```
-
-
-## warwickplots example
-
-```{r}
-#| echo: true
-#| output-location: slide
-#| code-line-numbers: "|9,15"
-library(ggplot2)
-library(warwickplots)
-library(palmerpenguins)
-
-ggplot(penguins, aes(flipper_length_mm, body_mass_g, group = species)) +
-  geom_point(aes(colour = species, shape = species), 
-             alpha = 0.8, 
-             size = 2) +
-  scale_color_palette_d(warwick_palettes$primary) +
-  labs(title = "Penguin Size, Palmer Station LTER",
-       subtitle = "Flipper length and body mass for **<span style = 'color:#3C1053;'>Adelie</span>**, **<span style = 'color:#6DCDB8;'>Chinstrap</span>** and **<span style = 'color:#CB333B;'>Gentoo</span>** Penguins. This is based on data made available in the **palmerpenguins** R package.",
-       caption = "Visualization: Ella Kaye, Data: Gorman, Williams & Fraser (2014) DOI: 10.1371/journal.pone.009008",
-       x = "flipper length (mm)",
-       y = "body mass (g)") +
-  theme_warwick() +
-  theme(legend.position = 'none')
-```
 
 ## Callouts {.smaller60}
 
@@ -139,22 +103,21 @@ There are custom colours for callouts:
 A note
 :::
 
-:::{.callout-warning}
-A warning
+:::{.callout-tip}
+This is a good idea
 :::
 
 :::{.callout-important}
 Something important
 :::
 
-:::{.callout-tip}
-This is a good idea
-:::
-
 :::{.callout-caution}
 Be careful about doing this
 :::
 
+:::{.callout-warning}
+A warning
+:::
 
 ## Callouts {.smaller60 .inverse}
 
@@ -164,38 +127,38 @@ There are custom colours for callouts:
 A note
 :::
 
-:::{.callout-warning}
-A warning
+:::{.callout-tip}
+This is a good idea
 :::
 
 :::{.callout-important}
 Something important
 :::
 
-:::{.callout-tip}
-This is a good idea
-:::
-
 :::{.callout-caution}
 Be careful about doing this
+:::
+
+:::{.callout-warning}
+A warning
 :::
 
 ## Columns with backgrounds
 
 ::: {columns}
-::: {.column .col-box-aubergine-light width="32%"}
+::: {.column .col-box-yellow width="32%"}
 Box 1
 
 Use class `.col-box-{color}` to apply colour box styling, e.g. `.col-box-aubergine-light`
 :::
 
-::: {.column .col-box-teal-light width="32%"}
+::: {.column .col-box-orange width="32%"}
 Box 2
 
 Default height is 450px
 :::
 
-::: {.column .col-box-ruby-light width="32%"}
+::: {.column .col-box-green width="32%"}
 Box 3
 :::
 :::
@@ -203,18 +166,18 @@ Box 3
 ## Columns with backgrounds: tall and short
 
 ::::: {columns}
-:::: {.column .col-box-aubergine-light-tall width="49%"}
+:::: {.column .col-box-yellow-tall width="49%"}
 Colour box styling can be applied to entire columns
 
 This column has class `.col-box-aubergine-light-tall`
 ::::
 
 :::: {.column width="49%"}
-:::{.col-box-ruby-light-short}
+:::{.col-box-orange-short}
 Or to divs within columns to create stacks
 :::
 
-:::{.col-box-teal-light-short}
+:::{.col-box-green-short}
 This div has class `.col-box-teal-light-short`
 :::
 
@@ -225,18 +188,18 @@ This div has class `.col-box-teal-light-short`
 ## Columns with backgrounds: tall and short {.inverse}
 
 ::::: {columns}
-:::: {.column .col-box-blue-dark-tall width="49%"}
+:::: {.column .col-box-red-tall width="49%"}
 Colour box styling can be applied to entire columns
 
 This column has class `.col-box-blue-dark-tall`
 ::::
 
 :::: {.column width="49%"}
-:::{.col-box-teal-dark-short}
+:::{.col-box-pink-short}
 Or to divs within columns to create stacks
 :::
 
-:::{.col-box-ruby-dark-short}
+:::{.col-box-blue-short}
 This div has class `.col-box-ruby-dark-short`
 :::
 
