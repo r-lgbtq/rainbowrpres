@@ -16,6 +16,12 @@ $royal-blue: #01299F;
 $dark-blue: #001552;
 $very-dark-blue: #000D33;
 
+$red30: #b32e28;
+$orange30: #b34b00;
+$yellow30: #b38c2f;
+$green30: #069057;
+$blue30: #017d9f;
+
 $gray: #58595B;
 $gray_dark: #383838; // 
 $black: #000000;
@@ -256,32 +262,30 @@ kbd {
   }
   
   // Inverse callout backgrounds
-  /*
   div.callout-note.callout-style-default .callout-title {
-    background-color: $blue_dark !important;
+    background-color: $blue30 !important;
   }
 
   div.callout-warning.callout-style-default .callout-title {
-    background-color: $gold_dark !important;
+    background-color: $yellow30 !important;
   }
 
   div.callout-important.callout-style-default .callout-title {
-    background-color: $ruby_dark !important;
+    background-color: $red30 !important;
   }
 
   div.callout-tip.callout-style-default .callout-title {
-    background-color: $teal_dark !important;
+    background-color: $green30 !important;
   }
 
   div.callout-caution.callout-style-default .callout-title {
-    background-color: $orange_dark !important;
+    background-color: $orange30 !important;
   }
   
   // white icons in inverse mode
   .callout-icon::before {
     filter: brightness(0) invert(1);
   }
-    */
 }
 
 // CRITICAL: This overrides callout title colors in inverse slides
