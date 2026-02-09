@@ -16,16 +16,6 @@ format:
 
 This is a Quarto presentation format that is consistent with the rainbowR [brand](https://rainbowr.org/new-look).
 
-It also features the University of Warwick logo on the title slide.
-
-. . .
-
-:::{.callout-note}
-To remove logo from title slide, **comment out** the following line in
-in `"_extensions/Warwick-Stats-Resources/warwickpres/_extension.yml"`:
-
-`data-background-image: warwick-logo-white.png`
-:::
 
 :::{.notes}
 Speaker notes go here.
@@ -35,7 +25,7 @@ Speaker notes go here.
 
 ## {.inverse .center-h .center .larger125}
 
-inverse class is also useful for stressing *key points*. 
+inverse class is also useful for stressing [*key points*]{.green}. 
 
 ## Colours
 
@@ -51,7 +41,7 @@ There's also a colour for short [links](https://github.com/r-lgbtq/rainbowrpres)
 
 - The inline code and link colours change when the inverse class is applied.
 
-## Colour classes {.inverse .larger200}
+## Colour classes for text {.inverse .larger150}
 
 [.red]{.red}
 
@@ -65,22 +55,23 @@ There's also a colour for short [links](https://github.com/r-lgbtq/rainbowrpres)
 
 [.pink]{.pink}
 
-## Offline fonts
+## Colour classes for highlighting {.larger150}
 
-The extension contains local font files for offline use.
+[.red-hl]{.red-hl}
 
-To use them:
+[.orange-hl]{.orange-hl}
 
-- open `"_extensions/r-lgbtq/rainbowrpres/_extension.yml"`
-- swap `css: online_fonts.css` for `css: offline_fonts.css`
-- uncomment the final two lines:
+[.yellow-hl]{.yellow-hl}
 
-  ```
-  format-resources: 
-    - offline_fonts
-  ```
+[.green-hl]{.green-hl}
 
-The `offline_fonts` directory will then appear in the root directory the next time you render the presentation, and the fonts will be available offline.
+[.blue-hl]{.blue-hl}
+
+[.pink-hl]{.pink-hl}
+
+## Yellow background {.yellow-bg footer=false}
+
+`.yellow-bg` class, and similar for the other rainbowR colours.
 
 ## Code
 
@@ -108,8 +99,7 @@ penguins %>%
   )
 ```
 
-
-## Callouts {.smaller60}
+## Callouts {.smaller80}
 
 There are custom colours for callouts: 
 
@@ -133,7 +123,7 @@ Be careful about doing this
 A warning
 :::
 
-## Callouts {.smaller60 .inverse}
+## Callouts {.smaller80 .inverse}
 
 There are custom colours for callouts: 
 
@@ -161,19 +151,19 @@ A warning
 
 ::: {columns}
 ::: {.column .col-box-yellow width="32%"}
-Box 1
+### Box 1
 
 Use class `.col-box-{color}` to apply colour box styling, e.g. `.col-box-yellow`
 :::
 
 ::: {.column .col-box-orange width="32%"}
-Box 2
+### Box 2
 
 Default height is 450px
 :::
 
 ::: {.column .col-box-green width="32%"}
-Box 3
+### Box 3
 :::
 :::
 
@@ -256,3 +246,4 @@ You can learn more about Quarto Revealjs presentations at <https://quarto.org/do
 You can learn more about Quarto extensions at <https://quarto.org/docs/extensions/>
 
 You can find these slides at <https://r-lgbtq.github.io/rainbowrpres/>
+

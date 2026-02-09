@@ -16,20 +16,14 @@ contributes:
         code-overflow: wrap
     revealjs:
       theme: [default, rainbowrpres.scss] 
-      css: online_fonts.css # online_fonts.css or offline_fonts.css
       highlight-style: rainbowr-light.theme
       slide-number: true
       callout-icon: true
-      #title-slide-attributes:
-        #data-background-color: "#3C1053"
-        #data-background-image: warwick-logo-white.png
-        #data-background-size: 15%
-        #data-background-position: 100% 0%
+      title-slide-attributes:
+        data-background-color: "#000D33"
       preview-links: auto
       link-external-newwindow: true
       width: 1280
       height: 720
       keep-md: false
       embed-resources: true
-#      format-resources:  # uncomment this and following line for offline fonts
-#        - offline_fonts

@@ -1,26 +1,19 @@
-# warwickpres format
+# rainbowrpres format
 
-This is a Quarto Revealjs presentation format that is consistent with The University of Warwick's [brand](https://warwick.ac.uk/about/brand/).
+This is a Quarto Revealjs presentation format that is consistent with the [rainbowR](https://rainbowr.org) [visual identity](https://rainbowr.org/new-look).
 
 It offers the following:
 
-- The University of Warwick logo on the title slide
-- A theme consistent with the University of Warwick's brand [colours](https://warwick.ac.uk/about/brand/brand-guidelines/colours/), including an inverse class
-- A font (Lato) consistent with the University of Warwick's [typography](https://warwick.ac.uk/about/brand/brand-guidelines/typography/) guidelines
-    - local font files which can be used offline 
-    - these not activated by default - see instructions in [template.qmd](template.qmd)
+- A theme consistent with rainbowR's colours
+- [figtree](https://fonts.google.com/specimen/Figtree) font
 - Colours consistent with the brand for quarto callouts
 - A custom syntax highlighting theme consistent with the brand colours
 - Additional convenience classes for sizing and aligning
 
-For plotting, it goes hand-in-hand with [warwickplots](https://warwick-stats-resources.github.io/warwickplots), an R package with colour palettes and a ggplot2 theme that are consistent with The University of Warwick’s branding.
-
-Users of warwickpres may also be interested in [warwickcourse](https://github.com/warwick-stats-resources/warwickcourse), a quarto template for University of Warwick branded course/workshop websites.
-
-## Installing warwickpres
+## Installing rainbowrpres
 
 ```bash
-quarto use template Warwick-Stats-Resources/warwickpres
+quarto use template r-lgbtq/rainbowrpres
 ```
 
 This will install the extension and create an example `.qmd` file that you can use as a starting place for your presentation. This also serves as documentation.
@@ -33,7 +26,7 @@ This is my preferred workflow for using the template and warwickpres extension:
 2. In the terminal, run
 
 ```bash
-quarto use template Warwick-Stats-Resources/warwickpres
+quarto use template r-lgbtq/rainbowrpres
 ```
 
 3. When prompted, type 'Y' to trust the authors of the template
@@ -52,7 +45,7 @@ When you want to start a new project with the template:
 3. Run the following:
 
 ``` bash
-quarto use template Warwick-Stats-Resources/warwickpres
+quarto use template r-lgbtq/rainbowrpres
 ```
 
 4. When prompted, type 'Y' to trust the authors of the template
@@ -92,6 +85,6 @@ In positron, you can also use the built-in 'Source Control' pane to set up git a
 
 Here is the source code for a minimal sample document: [template.qmd](template.qmd)
 
-And here it is online: <https://warwick-stats-resources.github.io/warwickpres>
+And here it is online: <https://r-lgbtq.github.io/rainbowrpres>
 
 These files together demonstrate what the warwickpres extension offers and how to use it.

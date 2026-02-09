@@ -1,5 +1,8 @@
 /*-- scss:defaults --*/
 
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Figtree:400,700&display=swap);
+
 $font-family-sans-serif: Figtree, Helvetica, sans-serif !default;
 $font-family-monospace: "Fira Mono", monospace;
 $headings-font-family: Figtree, Helvetica, sans-serif !default;
@@ -57,37 +60,6 @@ $callout-color-warning: $yellow;
 $callout-color-important: $red;
 
 /*-- scss:rules --*/
-// colour classes
-.red {
-  color: $red;
-  font-weight: 700;
-}
-
-.orange {
-  color: $orange;
-  font-weight: 700;
-}
-
-.yellow {
-  color: $yellow;
-  font-weight: 700;
-}
-
-.green {
-  color: $green;
-  font-weight: 700;
-}
-
-.blue {
-  color: $blue;
-  font-weight: 700;
-}
-
-.pink {
-  color: $pink;
-  font-weight: 700;
-}
-
 // Create a map using color names
 $colors: (
   'red': $red,
@@ -96,39 +68,46 @@ $colors: (
   'green': $green,
   'blue': $blue,
   'pink': $pink,
-  'purple': $purple
+  'purple': $purple,
+  'very-dark-blue': $very-dark-blue,
+  'white': $white
 );
 
-// mixin for boxes with height parameter
-@mixin box-style($height: 450px) {  // 450px is default value
-  border-radius: 25px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 20px;
-  box-sizing: border-box;
-  height: $height;
-}
-
-// Generate styles for each box
+// colour classes - bold text
 @each $name, $color in $colors {
-  .col-box-#{$name} {
-    @include box-style;  // uses default height
-    background: $color;
-  }
-  
-  // Create a tall variant
-  .col-box-#{$name}-tall {
-    @include box-style(550px);  
-    background: $color;
-  }
-
-  // Create a short variant
-  // two shorts with 10px gap stack to same height as tall 
-  .col-box-#{$name}-short {
-    @include box-style(270px);  
-    background: $color;
-  }
+    .#{$name} { 
+      color: $color;
+      font-weight: 700;
+    }
 }
+
+// colour classes - highlight text
+@mixin hl($padding: 5px 10px) {
+  font-weight: 700;
+  padding: $padding;
+}
+
+@each $name, $color in $colors {
+    .#{$name}-hl {
+      @include hl;  
+      background-color: $color;
+    }
+}
+
+// colour classes - slide background
+@each $name, $color in $colors {
+    .#{$name}-bg {
+      .slide-background-content {
+        background-color: $color;
+      }
+
+      .footer a {
+        $color: $royal-blue;
+      }
+    }
+}
+
+
 
 // Correct the alignment and spacing of the title in the callouts
 .reveal .callout {
@@ -265,7 +244,16 @@ kbd {
   }
   
   p code {
-    color: $yellow;
+    color: $yellow; // will be overwritten in col-box and {col}-bg
+  }
+
+  // syntax highlighting
+
+  code {
+    background-color: $very-dark-blue;
+    span.st {
+      color: $green;
+    }
   }
   
   // Inverse callout backgrounds
@@ -298,4 +286,64 @@ kbd {
 // CRITICAL: This overrides callout title colors in inverse slides
 .inverse .callout-title p { 
   color: $white !important; 
+}
+
+// mixin for boxes with height parameter
+@mixin box-style($height: 450px) {  // 450px is default value
+  border-radius: 25px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  height: $height;
+}
+
+// Generate styles for each box
+@each $name, $color in $colors {
+  .col-box-#{$name} {
+    @include box-style;  // uses default height
+    background: $color;
+    color: $very-dark-blue;
+    p code {
+      color: $royal-blue;
+      background-color: $color;
+    }
+  }
+  
+  // Create a tall variant
+  .col-box-#{$name}-tall {
+    @include box-style(550px);  
+    background: $color;
+    color: $very-dark-blue;
+    p code {
+      color: $royal-blue;
+      background-color: $color;
+    }
+  }
+
+  // Create a short variant
+  // two shorts with 10px gap stack to same height as tall 
+  .col-box-#{$name}-short {
+    @include box-style(270px);  
+    background: $color;
+    color: $very-dark-blue;
+    p code {
+      color: $royal-blue;
+      background-color: $color;
+    }
+  }
+}
+
+// Override code color for all color boxes
+[class*="col-box-"] p code,  [class*="-bg"] p code {
+  color: $royal-blue !important;
+}
+
+[class*="col-box-"] h1,  
+[class*="col-box-"] h2, 
+[class*="col-box-"] h3, 
+[class*="-bg"] h1,
+[class*="-bg"] h2,
+[class*="-bg"] h3  {
+  color: $very-dark-blue !important;
 }
