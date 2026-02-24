@@ -20,7 +20,7 @@ This will install the extension and create an example `.qmd` file that you can u
 
 ## Workflow for using this extension in [positron](https://positron.posit.co)
 
-This is my preferred workflow for using the template and warwickpres extension:
+This is my preferred workflow for using the template and rainbowrpres extension:
 
 1. In positron, open a new folder, which is where the template and extension will go
 2. In the terminal, run
@@ -31,7 +31,7 @@ quarto use template r-lgbtq/rainbowrpres
 
 3. When prompted, type 'Y' to trust the authors of the template
 4. When prompted, type 'N' to **not** create a subdirectory
-5. When prompted, type 'Y' to install the warwickpres extension
+5. When prompted, type 'Y' to install the rainbowrpres extension
 
 ## Workflow for using this extension in RStudio
 
@@ -50,9 +50,9 @@ quarto use template r-lgbtq/rainbowrpres
 
 4. When prompted, type 'Y' to trust the authors of the template
 5. When prompted, type 'Y' to create a subdirectory, then enter the directory name
-5. When prompted, type 'Y' to install the warwickpres extension
+5. When prompted, type 'Y' to install the rainbowrpres extension
 5. In RStudio Files pane (or other file navigator), go to the directory just created
-6. The directory should contain `"warwickpres.Rproj"`. Click on that to launch the project.
+6. The directory should contain `"rainbowrpres.Rproj"`. Click on that to launch the project.
     - If you have lots of directories from the same extension, may want to rename the .Rproj file to something unique, e.g. to share the directory name (to make file search easier)
 
 ## Workflow for using with git/GitHub/gh-pages
@@ -87,4 +87,4 @@ Here is the source code for a minimal sample document: [template.qmd](template.q
 
 And here it is online: <https://r-lgbtq.github.io/rainbowrpres>
 
-These files together demonstrate what the warwickpres extension offers and how to use it.
+These files together demonstrate what the rainbowrpres extension offers and how to use it.
